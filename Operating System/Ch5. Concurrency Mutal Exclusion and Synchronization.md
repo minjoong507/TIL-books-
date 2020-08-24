@@ -202,3 +202,43 @@ instruction 이다. 메모리 주소값이 주어진값과 동일하다면 해�
 ## 5. Semaphore
 
 정수형 변수로 오직 세 함수에 의해서 정의된다. 초기화, semWait, semSignal 세 함수를 기억하자.
+
+- semWait : 프로세스가 **critical section**에 진입 전에 호출하는 함수.
+- senSignal : 프로세스가 **critical section**에서 나올 때 호출하는 함수.
+
+<br/>
+
+**Strong semaphore** vs **Weak semaphore**
+
+- **Strong semaphore**는 큐에서 FIFO 규칙에 따라 프로세스가 제거되는 방면 **Weak semaphore**은 큐에서 프로세스가 제거되는 규칙이 명시가 되어있지 않다.
+
+<br/>
+
+**Mutex** vs **semaphore**
+
+- **mutex**는 이진 세마포어와 유사하다. 하지만 mutex에서는 프로세스가 소유권을 가져서 **critical section**에 진입하고 나오는 프로세스가 직접 세마포어 변수를 증감시킨다.
+
+<br/>
+
+## 6. Producer / Consumer Problem
+
+- 하나혹은 그 이상의 producer가 데이터를 만들고 버퍼에 위치시킵니다.
+- 단일 consumer가 한번에 하나씩 버퍼에 있는 데이터를 가져갑니다.
+- 오직 한 producer 나 consumer만이 버퍼에 접근할 수 있습니다.
+- 여기서 **주의 해야할 점**은 producer은 버퍼가 가득 찼을 때 데이터를 추가하면 안되고, consumer은 버퍼가 비었을 때 데이터를 가져가려 하면 안됩니다.
+
+<br/>
+
+## 7. Message Passing
+
+- 프로세스가 다른 프로세스와 상호 작용하려면 **Synchronization**과 **communication**을 만족해야한다. **Message passing**은 두 기능을 제공할 수 있는 한가지 접근법이다.
+- A와 B라는 프로세스가 있다고 가정하자.
+  - Direct : A가 커널에 메시지를 주고 커널이 B에게 메시지를 전달한다.
+  - Indirect : A가 커널에 메시지 박스를 두고 B에게 가져가라고 얘기한다. 그러면 B는 커널에 메시지박스에 접근해 읽어온다.
+
+<br/>
+
+## 8. Readers / Writers Problem
+
+- Readers는 데이터를 읽기만 하고 Writers는 데이터를 쓰기만 한다.
+- 여기서 주의할 점은 오직 한 Writer만 데이터를 쓸 수 있고 다른 Writer은 쓰지 못한다. Reader는 다른 Reader가 있어도 상관이 없다.
