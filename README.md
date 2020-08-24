@@ -1,4 +1,4 @@
-# Today I Learned(TIL) 
+# Today I Learned(TIL) 📖
 [![Blog](https://img.shields.io/badge/Blog-minjoong507.github.io-green.svg)](https://minjoong507.github.io/)
 
 ## 운영체제
