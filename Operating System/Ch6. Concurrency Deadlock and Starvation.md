@@ -53,7 +53,7 @@
 
 >  필요조건 3가지를 고려하여 데드락 발생 가능성을 확인한 다음 자원을 할당해주자. 근데 사실상 불가능한게 어느 자원을 요청할지 미리 알고 있어야함. 두 가지 접근법을 살펴보자.
 >
-> - Resource Allocation Denial : 만약 프로세스의 단계적 자원 요청이 데드락이 발생할 가능성이 있다면 할당하지 않음. *banker's algorithm*
+> - Resource Allocation Denial : 만약 프로세스의 단계적 자원 요청이 데드락이 발생할 가능성이 있다면 할당하지 않음. [*banker's algorithm*](https://jhnyang.tistory.com/102)
 > - Process Initiation Denial : 애초에 데드락이 발생할 것 같은 프로세스는 시작하지 않음.
 
 <br/>
