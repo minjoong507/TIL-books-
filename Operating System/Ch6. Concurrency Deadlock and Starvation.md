@@ -64,7 +64,7 @@
 >
 >  자원 할당이 가능하다면 프로세스에게 할당해줌. OS는 circular wait 조건을 탐지하기 위한 알고리즘을 실행. 장점으로는 데드락 탐지를 빠르게 할 수 있고 알고리즘이 상대적으로 단순하다. 하지만 단점은 매번 알고리즘을 실행시키면서 확인해야 하기 때문에 프로세서 시간이 상당히 소요된다.
 >
->  **여기서 Deadlock avoidance와의 차이? Deadlock avoidance는 데드락이 발생하는지 미리 검사하여 발생한다면 자원을 할당해 줄 수 있음에도 불구하고 할당해주지 않음. 하지만 Deadlock detection은 할당해줌. **
+>  **여기서 Deadlock avoidance와의 차이? Deadlock avoidance는 데드락이 발생하는지 미리 검사하여 발생한다면 자원을 할당해 줄 수 있음에도 불구하고 할당해주지 않음. 하지만 Deadlock detection은 할당해줌.**
 
 <br/>
 
